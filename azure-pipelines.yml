@@ -12,7 +12,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '11899675-02d7-4c72-9401-1b3fc33d207e'
   imageRepository: 'vinodockerapp'
-  containerRegistry: 'dockercontainerregistry12.azurecr.io'
+  containerRegistry: 'docker hub'
   dockerfilePath: '$(Build.SourcesDirectory)/DockerAPP/Dockerfile'
   tag: '$(Build.BuildId)'
 
