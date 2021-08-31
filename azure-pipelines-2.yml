@@ -29,5 +29,6 @@ stages:
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/DockerAPP/Dockerfile'
+        buildContext: $(Build.ArtifactStagingDirectory)
         tags: |
           $(tag)
