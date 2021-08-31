@@ -31,7 +31,7 @@ stages:
     - task: CopyFiles@2
       inputs:
         Contents: '**'
-        TargetFolder: '$(Build.AartifactStagingDirectory)'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
@@ -39,6 +39,6 @@ stages:
         repository: $(imageRepository)
         dockerfile: $(dockerfilePath)
         containerRegistry: $(dockerRegistryServiceConnection)
-        buildContext: '$(Build.AartifactStagingDirectory)'
+        buildContext: '$(Build.ArtifactStagingDirectory)'
         tags: |
           $(tag)
